@@ -11,17 +11,22 @@ namespace GameEngine
     {
         public const int WINDOW_HEIGHT = 700;
         public const int WINDOW_WIDTH = 1200;
-
+		
+		private object lockobj = new object();
+		
         public static Game instance { get; private set; }
         public GameGraphics graphics { get; private set; }
 
         // Singleton utilized
         public static Game GetInstance()
         {
-            if (instance == null)
-            {
-                instance = new Game();
-            }
+			lock (lockobj)
+			{
+				if (instance == null)
+				{
+					instance = new Game();
+				}
+			}
             return instance;
         }
 

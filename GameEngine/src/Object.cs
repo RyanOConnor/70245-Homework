@@ -13,7 +13,9 @@ namespace GameEngine
         IObject Clone();
     }
 
-    // Prototype utilized 
+    // Prototype utilized
+	// TODO: Rename class to avoid conflict with C#'s Object:
+	// http://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx
     public class Object
     {
         public string name { get; private set; }

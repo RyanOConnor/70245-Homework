@@ -13,6 +13,8 @@ namespace GameEngine
         static bool[] currentPress = new bool[127];
         static bool[] previousPress = new bool[127];
 
+		// TODO: Replace key type with Keys enum instead of string
+		// http://msdn.microsoft.com/en-us/library/system.windows.forms.keys%28v=vs.110%29.aspx
         static Dictionary<string, bool> current = new Dictionary<string, bool>();
         static Dictionary<string, bool> previous = new Dictionary<string, bool>();
 
